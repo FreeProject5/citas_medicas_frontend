@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="medico.css" media="all">
+    <script type="text/javascript" src="medico.js"></script>
+    <title>Pagina medico</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><a href="index.html"> Pagina principal</a></div>
+        <button class="button">Log out</button>
+    </div>
+    
+    <div id="contenedor">
+        <div>
+          <table id="cuadrocitas">
+            <tr>
+              <th style="border:1px solid black;">Citas pendientes</th>
+            </tr>
+            <tr>
+              <td style="border:1px solid black;">Cita 1</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid black;">Cita 2</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <div id="calendario">
+            <div id="anterior" onclick="mesantes()"></div>
+            <div id="posterior" onclick="mesdespues()"></div>
+            <h2 id="titulos"></h2>
+            <table id="diasc">
+              <tr id="fila0"><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+              <tr id="fila1"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr id="fila2"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr id="fila3"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr id="fila4"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr id="fila5"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              <tr id="fila6"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </table>
+            <div id="fechaactual"><i onclick="actualizar()">HOY: </i></div>
+            <div id="buscafecha">
+              <form action="#" name="buscar">
+                <p>Buscar ... MES
+                  <select name="buscames">
+                    <option value="0">Enero</option>
+                    <option value="1">Febrero</option>
+                    <option value="2">Marzo</option>
+                    <option value="3">Abril</option>
+                    <option value="4">Mayo</option>
+                    <option value="5">Junio</option>
+                    <option value="6">Julio</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Septiembre</option>
+                    <option value="9">Octubre</option>
+                    <option value="10">Noviembre</option>
+                    <option value="11">Diciembre</option>
+                  </select>
+                ... AÑO ...
+                  <input type="text" name="buscaanno" maxlength="4" size="4" />
+                ... 
+                  <input type="button" value="BUSCAR" onclick="mifecha()" />
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div>
+        <h3>Registro de horarios disponibles</h3>
+        <form action="submit-form.php" method="post">
+            <p><label for="dia">Seleccionar dia:</label></p>
+            <p><input type="text" id="dia" name="dia" required></p>
+
+            <p><label for="hora">Seleccionar hora:</label></p>
+            <p><input type="text" id="hora" name="hora" required></p>
+                    
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

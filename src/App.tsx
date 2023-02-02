@@ -1,15 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
+import Landing from './Pages/landing'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from './components/Login';
+import SignUp from './components/Signup';
 
-function App(): JSX.Element {
-  
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/login" element={<Login/>}/>
 
 
-    </div>
-  );
+      </Routes>
+    </Router>
+   
+    
+  )
 }
 
-export default App;
+export default App

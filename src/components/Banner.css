@@ -1,0 +1,99 @@
+/* banner section start */
+
+.header_section {
+    width: 100%;
+    float: left;
+    background-image: url(../public/images/banner-bg.png);
+    height: auto;
+    background-size: 100%;
+}
+
+.banner_section {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    border-bottom: 80px solid #7ed957;
+}
+.banner_main {
+    width: 44%;
+    float: left;
+    background: #fff;
+    padding: 40px;
+}
+
+.banner_taital {
+    width: 100%;
+    float: left;
+    font-size: 48px;
+    color: #060707;
+    font-weight: bold;
+}
+.banner_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #000;
+    margin: 0px;
+}
+.btn_main {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+}
+.contact_bt {
+    width: 170px;
+    float: left;
+}
+.contact_bt a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #060707;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 40px;
+}
+.contact_bt a:hover {
+    color: #ffffff;
+    background-color: #7ed957;
+}
+.contact_bt.active a {
+    color: #ffffff;
+    background-color: #7ed957;
+}
+.readmore_bt {
+    width: 170px;
+    float: left;
+    margin-left: 20px;
+}
+
+.readmore_bt a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #060707;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 40px;
+}
+.readmore_bt a:hover {
+    color: #ffffff;
+    background-color: #7ed957;
+}
+
+.carousel-indicators {
+    bottom: -120px;
+}
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #ffffff;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+/* banner section end */

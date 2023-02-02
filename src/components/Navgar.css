@@ -1,0 +1,41 @@
+/* header section start */
+
+.bg-light {
+    background-image: url(../public/images/header-bg.png);
+    background-color: transparent !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 20px 60px 17px 70px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #acabab;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #070707;
+}
+.navbar-light .navbar-nav .active>.nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #070707;
+}
+.logo{ 
+    width: 35%;
+    float: left;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: initial!important;
+}
+.search_icon {
+    width: 100%;
+    float: left;
+    padding-left: 40px;
+}
+/* header section end */
+

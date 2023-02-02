@@ -1,0 +1,108 @@
+/* contact section start */
+
+.testimonial_section{
+    width: 100%;
+    background-image: url(../public/images/hospital-bg.png);
+    float: left;
+    padding-bottom: 180px;
+    height: auto;
+    background-size: 100%;
+}
+.testimonial_taital{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.testimonial_text{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.testimonial_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.testimonial_box {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 55px 30px 100px 30px;
+    box-shadow: 0px 2px 12px 10px #f3f2f2;
+}
+.jonimo_text{
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #7ed957;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.dummy_text{
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    margin: 0px;
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.jonimo_taital_main{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #363636;
+}
+.quick_icon{
+    float: right;
+}
+.quick_icon_1{
+    display: none;
+}
+
+.testimonial_box:hover{
+    background-color: #7ed957;
+}
+.testimonial_box:hover .dummy_text{
+    color: #ffffff;
+}
+.testimonial_box:hover .jonimo_text{
+    color: #ffffff;
+}
+.testimonial_box:hover .quick_icon_1{
+    display: block;
+}
+.testimonial_box:hover .quick_icon{
+    display: none;
+}
+.testimonial_box:hover .jonimo_taital_main{
+    border-bottom: 1px solid #ffffff;
+}
+
+#my_carousel .carousel-indicators {
+    bottom: -100px;
+}
+#my_carousel .carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #0a0a0a;
+}
+
+#my_carousel .carousel-indicators .active {
+    width: 50px;
+    background-color: #7ed957;
+}
+
+.margin_top90{
+    margin-top: 90px;
+}
+
+
+/* contact section end */

@@ -193,7 +193,7 @@ button {
 /* header section start */
 
 .bg-light {
-  background-image: url(../public/images/header-bg.png);
+  background-image: url(/src/public/images/header-bg.png);
   background-color: transparent !important;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -368,7 +368,7 @@ button {
 .header_section {
   width: 100%;
   float: left;
-  background-image: url(../public/images/banner-bg.png);
+  background-image: url(/src/public/images/banner-bg.png);
   height: auto;
   background-size: 100%;
 }
@@ -467,7 +467,7 @@ button {
 
 .testimonial_section{
   width: 100%;
-  background-image: url(../public/images/hospital-bg.png);
+  background-image: url(/src/public/images/hospital-bg.png);
   float: left;
   padding-bottom: 180px;
   height: auto;
@@ -717,7 +717,7 @@ input {
 }
 
 .bg-red {
-  background-image: url(../images/campo.png);
+  background-image: url(/src/public/images/campo.png);
 }
 
 /* signup section ends */

@@ -1,4 +1,4 @@
-import Navgar from "./Navgar";
+import Navgar from "./Navbar";
 import Footer from "./Footer";
 import React, { useState } from 'react';
 

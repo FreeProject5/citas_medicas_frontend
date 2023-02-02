@@ -1,5 +1,5 @@
 import React from "react";
-import Navgar from "./Navgar";
+import Navgar from "./Navbar";
 import Footer from "./Footer";
 
 

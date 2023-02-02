@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Navgar.css"
 import logo from "../public/images/logo.png"
 
 const Navgar = () => {
@@ -18,7 +17,7 @@ const Navgar = () => {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="logo">
           <a href="/">
-            <img src = {logo} className = "logo"/>
+            <img src = {logo} className = "logo" alt = "logo"/>
             
           </a>
         </div>

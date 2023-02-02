@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css";
 import map from "../public/images/map-icon.png"
 import call from "../public/images/call-icon.png"
 import mail from "../public/images/mail-icon.png"
@@ -12,21 +11,21 @@ const Footer = () => {
       <div className="container">
         <div className="location_main">
           <div className="location_text">
-            <img src= {map} />
+            <img src= {map} alt = "map"/>
             <span className="padding_left_10">
-              <a href="#">Javier Prado Este 4763 Camacho, La Molina</a>
+              <a href="/">Javier Prado Este 4763 Camacho, La Molina</a>
             </span>
           </div>
           <div className="location_text center">
-            <img src= {call} />
+            <img src= {call} alt = "call"/>
             <span className="padding_left_10">
-              <a href="#">(01) 217 0000</a>
+              <a href="/">(01) 217 0000</a>
             </span>
           </div>
           <div className="location_text right">
-            <img src= {mail} />
+            <img src= {mail} alt = "mail" />
             <span className="padding_left_10">
-              <a href="#">contactohospitaldelbienestar@gmail.com</a>
+              <a href="/">contactohospitaldelbienestar@gmail.com</a>
             </span>
           </div>
         </div>
@@ -66,18 +65,18 @@ const Footer = () => {
                 name="Enter Your Email"
               />
               <div className="subscribe_bt">
-                <a href="#">Subscribe</a>
+                <a href="/">Subscribe</a>
               </div>
               <div className="social_icon">
                 <ul>
                   <li>
                     <a href="https://github.com/FreeProject5">
-                      <img src={github} />
+                      <img src={github} alt = "github"/>
                     </a>
                   </li>
                   <li>
                     <a href="cascada.html">
-                      <img src={o} />
+                      <img src={o} alt = "o"/>
                     </a>
                   </li>
                 </ul>
@@ -88,7 +87,7 @@ const Footer = () => {
       </div>
       <div className="copyright_section">
          <div className="container">
-            <p className="copyright_text">Copyright 2023 - Hospital del Bienestar. Todos los derechos reservados.<a href=""></a></p>
+            <p className="copyright_text">Copyright 2023 - Hospital del Bienestar. Todos los derechos reservados.</p>
          </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import Navgar from "./Navgar";
 import Footer from "./Footer";
-import "./Signup.css"
 import React, { useState } from 'react';
 
 const SignUp = () => {

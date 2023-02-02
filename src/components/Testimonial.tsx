@@ -1,5 +1,4 @@
 import React from "react";
-import "./Testimonial.css"
 import comillas from "../public/images/quick-icon.png"
 
 const Testimonial = () => {
@@ -34,10 +33,10 @@ const Testimonial = () => {
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Luis Perez Yañez</h4>
                         <div className="quick_icon">
-                          <img src= {comillas} />
+                          <img src= {comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">
@@ -55,10 +54,10 @@ const Testimonial = () => {
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Alejandra Ramos Cabrera</h4>
                         <div className="quick_icon">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">
@@ -88,10 +87,10 @@ const Testimonial = () => {
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Benito Juarez Ruiz</h4>
                         <div className="quick_icon">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">
@@ -109,10 +108,10 @@ const Testimonial = () => {
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Martin Condorí Guzman</h4>
                         <div className="quick_icon">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">
@@ -143,10 +142,10 @@ const Testimonial = () => {
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Dr. Luis Pevez Ramirez</h4>
                         <div className="quick_icon">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">
@@ -167,10 +166,10 @@ const Testimonial = () => {
                           Dra. Maria Rojas Gonzales
                         </h4>
                         <div className="quick_icon">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                         <div className="quick_icon_1">
-                          <img src={comillas} />
+                          <img src={comillas} alt = "comillas"/>
                         </div>
                       </div>
                       <p className="dummy_text">

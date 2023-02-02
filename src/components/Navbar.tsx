@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../public/images/logo.png"
 
-const Navgar = () => {
+const Navbar = () => {
   const navigate = useNavigate() 
   const ManejarClick = () => {
     navigate ("/signup")
@@ -56,4 +56,4 @@ const Navgar = () => {
   );
 };
 
-export default Navgar;
+export default Navbar;

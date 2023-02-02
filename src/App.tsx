@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+import MenuPacient from './pages/menuPacient';
 
-function App(): JSX.Element {
+function App(){
   
   return (
-    <div>
-
-
-    </div>
+    <Router>
+    <Routes>
+      <Route path="/paciente" element={<MenuPacient/>}/>
+    </Routes>
+  </Router>
   );
 }
 

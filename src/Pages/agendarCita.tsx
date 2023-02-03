@@ -5,6 +5,15 @@ import { useNavigate } from "react-router-dom";
 const AgendarCita = () => {
   const [user, setUser] = useState<any>();
 
+  const [dataForm, setDataForm] = useState({
+    firstname: user?user.data.firstname:"",
+    lastname: user?user.data.lastname:"",
+    speciality: "",
+    doctorName: "",
+    consultDate: "",
+    hour: "",
+  });
+
   const fetchUser = async () => {
     const response = await fetch(`http://localhost:6005/api/v1/patient/1`);
     console.log(response);
@@ -23,14 +32,7 @@ const AgendarCita = () => {
     navigate("/paciente");
   };
 
-  const [dataForm, setDataForm] = useState({
-    firstname: "",
-    lastname: "",
-    speciality: "",
-    doctorName: "",
-    consultDate: "",
-    hour: "",
-  });
+
 
   const handleInputChange = (e: any) => {
     if (!e.target.value) return;

@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import Landing from './Pages/landing'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './components/Login';
-import SignUp from './components/Signup';
 import MenuPacient from './Pages/menuPacient';
 import AgendarCita from './Pages/agendarCita';
+import SignUp from './components/SignUp';
 
 
 function App() {

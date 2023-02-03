@@ -7,6 +7,8 @@ import Login from './components/Login';
 import SignUp from './components/Signup';
 import MenuPacient from './Pages/menuPacient';
 import AgendarCita from './Pages/agendarCita';
+import Paginamedico from './medico/medicopag';
+import Paginacitas from './citas/citaspag';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path="/login" element={<Login/>}/>Ñ
         <Route path="/paciente" element={<MenuPacient/>}/>
         <Route path="/paciente/agendar-cita" element={<AgendarCita/>}/>
+        <Route path="/medico" element={<Paginamedico/>}/>
+        <Route path="/citas" element={<Paginacitas/>}/>
       </Routes>
     </Router>
    

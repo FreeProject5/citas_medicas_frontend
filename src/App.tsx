@@ -5,7 +5,7 @@ import { useAuthStore } from './store/auth';
 import Login from './components/Login';
 import MenuPacient from './Pages/menuPacient';
 import AgendarCita from './Pages/agendarCita';
-import SignUp from './components/Signup';
+import SignUp from './components/SignUp';
 import Paginamedico from './medico/medicopag';
 import Paginacitas from './citas/citaspag';
 import { ProtectedRoute } from './components/ProtectedRoute';

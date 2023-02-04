@@ -45,6 +45,7 @@
   "devDependencies": {
     "@types/react-calendar": "^3.9.0",
     "bootstrap": "^5.2.0",
-    "react-calendar": "^4.0.0"
+    "react-calendar": "^4.0.0",
+    "zustand": "^4.3.2"
   }
 }

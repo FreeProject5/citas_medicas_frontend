@@ -724,7 +724,8 @@ input {
 
 /* Agendar Citas start*/
 
-.form-agendar-cita {
+.form-agendar-cita ,
+.form-login{
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -733,3 +734,5 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+/* Login Form */

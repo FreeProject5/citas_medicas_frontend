@@ -1,13 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import Landing from './Pages/landing'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useAuthStore } from './store/auth';
 import Login from './components/Login';
-import SignUp from './components/Signup';
 import MenuPacient from './Pages/menuPacient';
 import AgendarCita from './Pages/agendarCita';
+import SignUp from './components/Signup';
 import Paginamedico from './medico/medicopag';
 import Paginacitas from './citas/citaspag';
 import { ProtectedRoute } from './components/ProtectedRoute';

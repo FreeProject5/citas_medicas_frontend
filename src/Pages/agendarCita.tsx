@@ -1,38 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
 
 const AgendarCita = () => {
-  const [user, setUser] = useState<any>();
-
+  const navigate = useNavigate();
+  const usuario = useAuthStore.getState().user
   const [dataForm, setDataForm] = useState({
-    firstname: user?user.data.firstname:"",
-    lastname: user?user.data.lastname:"",
+    firstname: usuario?usuario.firstname:"",
+    lastname: usuario?usuario.lastname:"",
     speciality: "",
     doctorName: "",
     consultDate: "",
     hour: "",
   });
-
-  const fetchUser = async () => {
-    const response = await fetch(`http://localhost:6005/api/v1/patient/1`);
-    console.log(response);
-    const responseJson = await response.json();
-    console.log(responseJson);
-    setUser(responseJson);
-  };
-
-  useEffect(() => {
-    fetchUser();
-  }, []);
-
-  const navigate = useNavigate();
-
-  const handleViewPacient = () => {
-    navigate("/paciente");
-  };
-
-
 
   const handleInputChange = (e: any) => {
     if (!e.target.value) return;
@@ -65,7 +46,7 @@ const AgendarCita = () => {
     <>
       <Navbar />
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
-      {user && (
+      {usuario && (
         <form className="form-agendar-cita" onSubmit={handleSubmit}>
           <div className="container">
             <div className="row mb-4">
@@ -76,7 +57,7 @@ const AgendarCita = () => {
                     type="text"
                     className="form-control"
                     name="firstname"
-                    defaultValue={user.data.firstname}
+                    defaultValue={usuario.firstname}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -88,7 +69,7 @@ const AgendarCita = () => {
                     className="form-control"
                     type="text"
                     name="lastname"
-                    defaultValue={user.data.lastname}
+                    defaultValue={usuario.lastname}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -152,7 +133,7 @@ const AgendarCita = () => {
               </button>
               <button
                 className="btn btn-danger ms-1 "
-                onClick={handleViewPacient}
+                onClick={()=>navigate("/paciente")}
               >
                 Cancelar
               </button>

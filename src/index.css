@@ -722,6 +722,7 @@ input {
 
 /* signup section ends */
 
+
 /* Agendar Citas start*/
 
 .form-agendar-cita ,
@@ -733,6 +734,12 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.logout-item {
+  display: flex;
+  position: absolute;
+  right: 10px;
 }
 
 /* Login Form */

@@ -371,6 +371,7 @@ button {
   background-image: url(/src/public/images/banner-bg.png);
   height: auto;
   background-size: 100%;
+  padding-bottom: 190px;
 }
 
 .banner_section {
@@ -415,7 +416,7 @@ button {
   color: #ffffff;
   background-color: #060707;
   text-align: center;
-  padding: 10px 0px;
+  padding: 20px 0px;
   border-radius: 40px;
 }
 .contact_bt a:hover {
@@ -498,10 +499,14 @@ button {
   padding-bottom: 10px;
 }
 .testimonial_box {
-  width: 100%;
+  width: 120%;
   background-color: #ffffff;
-  padding: 55px 30px 100px 30px;
-  box-shadow: 0px 2px 12px 10px #f3f2f2;
+  padding: 55px 30px 100px 50px;
+  box-shadow: 0px 2px 14px 10px #f3f2f2;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 .jonimo_text{
   width: 100%;
@@ -512,7 +517,7 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 .dummy_text{
-  width: 100%;
+  width: 140%;
   font-size: 16px;
   color: #000;
   margin: 0px;
@@ -567,6 +572,11 @@ button {
 
 .margin_top90{
   margin-top: 90px;
+}
+
+.testimonial_image {
+  margin: 0 auto;
+  margin-right: 2px;
 }
 
 

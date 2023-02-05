@@ -49,11 +49,11 @@ const Footer = () => {
               </p>
             </div>
             <div className="col-lg-4">
-              <h2 className="footer_taital">Services Link</h2>
+              <h2 className="footer_taital">Patrocinadores</h2>
               <p className="footer_text">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority havThere are many variations of passages of
-                Lorem Ipsum available, but the majority hav
+                  <a href= "https://www.silabuz.com" target="_blank">
+                    Silabuz
+                  </a>
               </p>
             </div>
             <div className="col-lg-4">

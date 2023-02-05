@@ -1,87 +1,186 @@
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import axios from "../libs/axios";
 import Navgar from "./Navbar";
 import Footer from "./Footer";
-import React, { useState } from 'react';
+import { useNavigate } from "react-router";
+
+// const phoneRegex = RegExp(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
+
+const schema = yup
+  .object({
+    firstname: yup.string().required("Este campo es requerido."),
+    lastname: yup.string().required("Este campo es requerido."),
+    email: yup.string().email().required("Ingresa tu email."),
+    password: yup
+      .string()
+      .required("No ingresaste una contraseña.")
+      .min(
+        8,
+        "La contraseña es muy corta - debe tener 8 caracteres como minimo."
+      ),
+    phone: yup
+      .string()
+      .min(
+        9,
+        "El teléfono debe tener como mínimo 9 dígitos"
+      )
+      .max(
+        12,
+        "El teléfono debe tener como máximo 12 dígitos"
+      )
+      // .matches(phoneRegex, "Invalid phone")
+      .required("Teléfono es requerido"),
+    age: yup.number().positive().integer().required("Ingresa tu edad"),
+  })
+  .required();
+type FormData = yup.InferType<typeof schema>;
 
 const SignUp = () => {
-  const [edad, setEdad] = useState('');
+  const [resStatus, setResStatus] = useState("");
+  const navigate = useNavigate();
 
-  const handleChange = (event:any) => {
-    const input = event.target.value;
-    if (!isNaN(input) && input > 0) {
-      setEdad(input);
-    }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+    axios
+      .post("patient", data)
+      .then(function (response) {
+        console.log(response.status);
+        if (response.status === 200) {
+          console.log(response)
+          setResStatus("Registro exitoso!");
+          navigate("/login");
+        } else {
+          setResStatus("error");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
-    return (
-      <>
-      <Navgar/>
+
+  console.log(resStatus);
+  return (
+    <>
+      <Navgar />
       <div className="page-wrapper bg-red p-t-180 p-b-100 font-robo">
         <div className="wrapper wrapper--w960">
-            <div className="card card-2">
-                <div className="card-heading"></div>
-                <div className="card-body">
-                    <h2 className="title">Registrate</h2>
-                    <form method="POST">
-                        <div className="input-group">
-                            <label htmlFor="nombres">Nombres:</label>
-                            <input className="input--style-2" type="text" placeholder="Tu nombres aquí" name="firstname" required/>
-                        </div>
-                        <div className="row row-space">
-                            <div className="col-2">
-                                <div className="input-group">
-                                  <label htmlFor="apellidos">Apellidos:</label>
-                                  <input className="input--style-2" type="text" placeholder="Tu apellidos aquí" name="lastname" required/>
-                                </div>
-                            </div>
-                            <div className="col-2">
-                                <div className="input-group">
-                                    <div className="rs-select2 js-select-simple select--no-search">
-                                      <label htmlFor="edad">Edad:</label>
-                                      <input className="input--style-2" type="number" value={edad} onChange={handleChange} placeholder="Ingresa tu edad aquí" name="age" required/>
-                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="input-group">
-                            <div className="rs-select2 js-select-simple select--no-search">
-                            <label htmlFor="correo">Correo Electrónico:</label>
-                            <input className="input--style-2" type="email" placeholder="ejemplo@correo.com" name="email" required/>
-                                
-                            </div>
-                        </div>
-                        <div className="row row-space">
-                            <div className="col-2">
-                                <div className="input-group">
-                                  <label htmlFor="contraseña">Contraseña:</label>
-                                  <input className="input--style-2" type="password" placeholder="Ingresa tu contraseña" name="password" required/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row row-space">
-                            <div className="col-2">
-                                <div className="input-group">
-                                  <label htmlFor="telefono">Teléfono:</label>
-                                  <input className="input--style-2" type="tel" placeholder="Ingresa tu teléfono" name="email" required/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="p-t-30">
-                            <button className="btn btn--radius btn--green" type="submit">Registrate</button>
-                        </div>
-                    </form>
+          <div className="card card-2">
+            <div className="card-heading"></div>
+            <div className="card-body">
+              <h2 className="title">Registrate</h2>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="input-group">
+                  <label htmlFor="firstname">Nombres:</label>
+                  <input
+                    className="input--style-2"
+                    type="text"
+                    placeholder="Tu nombres aquí"
+                    {...register("firstname")}
+                  />
+                  <span className="text-danger text-small d-block mb-2">
+                    {errors.firstname?.message}
+                  </span>
                 </div>
+                <div className="row row-space">
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label htmlFor="lastname">Apellidos:</label>
+                      <input
+                        className="input--style-2"
+                        placeholder="Tus apellidos aquí"
+                        {...register("lastname")}
+                      />
+                      <span className="text-danger text-small d-block mb-2">
+                        {errors.lastname?.message}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <div className="rs-select2 js-select-simple select--no-search">
+                      <label htmlFor="age">Edad:</label>
+                      <input
+                        className="input--style-2"
+                        placeholder="Ingresa tu edad aquí"
+                        {...register("age")}
+                      />
+                      <span className="text-danger text-small d-block mb-2">
+                        {errors.age?.message}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <div className="rs-select2 js-select-simple select--no-search">
+                      <label htmlFor="email">Correo Electrónico:</label>
+                      <input
+                        className="input--style-2"
+                        placeholder="ejemplo@correo.com"
+                        {...register("email")}
+                      />
+                      <span className="text-danger text-small d-block mb-2">
+                        {errors.email?.message}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <div className="rs-select2 js-select-simple select--no-search">
+                      <label htmlFor="password">Contraseña:</label>
+                      <input
+                        className="input--style-2"
+                        type="password"
+                        placeholder="Ingresa tu contraseña"
+                        {...register("password")}
+                      />
+                      <span className="text-danger text-small d-block mb-2">
+                        {errors.password?.message}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-2">
+                  <div className="input-group">
+                    <div className="rs-select2 js-select-simple select--no-search">
+                      <label htmlFor="phone">Teléfono:</label>
+                      <input
+                        className="input--style-2"
+                        placeholder="Ingresa tu teléfono"
+                        {...register("phone")}
+                      />
+                      <span className="text-danger text-small d-block mb-2">
+                        {errors.phone?.message}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-t-30">
+                  <button className="btn btn-primary" type="submit">
+                    Registrarse
+                  </button>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-
-
-
-
-
-      <Footer/>
-      </>
-    )
-}
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default SignUp;

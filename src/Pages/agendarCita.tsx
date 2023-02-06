@@ -4,6 +4,7 @@ import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
 import {getDoctors} from "../api/getDoctors"
 import { getSpecialities } from "../api/getEspecialities";
+import { getPacients } from "../api/getPacients";
 
 const AgendarCita = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const AgendarCita = () => {
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
       <button className ="btn btn-danger"onClick={getDoctors}>ver doctores</button>
       <button className ="btn btn-info"onClick={getSpecialities}>ver Especialidades</button>
+      <button className ="btn btn-info"onClick={getPacients}>ver Pacientes</button>
       {usuario && (
         <form className="form-agendar-cita" onSubmit={handleSubmit}>
           <div className="container">

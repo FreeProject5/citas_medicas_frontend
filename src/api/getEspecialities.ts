@@ -5,5 +5,5 @@ export const getSpecialities = async () => {
       "https://citas-medicas-nu.vercel.app/api/v1/specialties"
     );
     const specialialities = response.data.data;
-    console.log(specialialities);
+    return specialialities;
   };

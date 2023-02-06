@@ -1,38 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
+import {getDoctors} from "../api/getDoctors"
+import { getSpecialities } from "../api/getEspecialities";
 
 const AgendarCita = () => {
-  const [user, setUser] = useState<any>();
-
+  const navigate = useNavigate();
+  const usuario = useAuthStore.getState().user;
   const [dataForm, setDataForm] = useState({
-    firstname: user?user.data.firstname:"",
-    lastname: user?user.data.lastname:"",
+    firstname: usuario ? usuario.firstname : "",
+    lastname: usuario ? usuario.lastname : "",
     speciality: "",
     doctorName: "",
     consultDate: "",
     hour: "",
   });
-
-  const fetchUser = async () => {
-    const response = await fetch(`http://localhost:6005/api/v1/patient/1`);
-    console.log(response);
-    const responseJson = await response.json();
-    console.log(responseJson);
-    setUser(responseJson);
-  };
-
-  useEffect(() => {
-    fetchUser();
-  }, []);
-
-  const navigate = useNavigate();
-
-  const handleViewPacient = () => {
-    navigate("/paciente");
-  };
-
-
 
   const handleInputChange = (e: any) => {
     if (!e.target.value) return;
@@ -46,26 +29,14 @@ const AgendarCita = () => {
     e.preventDefault();
     console.log(dataForm);
 
-    fetch("http://localhost:6005/api/v1/appointments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dataForm),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Success sent:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
   };
   return (
     <>
       <Navbar />
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
-      {user && (
+      <button className ="btn btn-danger"onClick={getDoctors}>ver doctores</button>
+      <button className ="btn btn-info"onClick={getSpecialities}>ver Especialidades</button>
+      {usuario && (
         <form className="form-agendar-cita" onSubmit={handleSubmit}>
           <div className="container">
             <div className="row mb-4">
@@ -76,7 +47,7 @@ const AgendarCita = () => {
                     type="text"
                     className="form-control"
                     name="firstname"
-                    defaultValue={user.data.firstname}
+                    defaultValue={usuario.firstname}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -88,7 +59,7 @@ const AgendarCita = () => {
                     className="form-control"
                     type="text"
                     name="lastname"
-                    defaultValue={user.data.lastname}
+                    defaultValue={usuario.lastname}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -152,7 +123,7 @@ const AgendarCita = () => {
               </button>
               <button
                 className="btn btn-danger ms-1 "
-                onClick={handleViewPacient}
+                onClick={() => navigate("/paciente")}
               >
                 Cancelar
               </button>

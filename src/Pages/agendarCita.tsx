@@ -8,7 +8,7 @@ import { getPacients } from "../api/getPacients";
 
 const AgendarCita = () => {
   const navigate = useNavigate();
-  const usuario = useAuthStore.getState().user;
+  const usuario = useAuthStore.getState().user[0];
   const [dataForm, setDataForm] = useState({
     firstname: usuario ? usuario.firstname : "",
     lastname: usuario ? usuario.lastname : "",
@@ -29,6 +29,7 @@ const AgendarCita = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(dataForm);
+
 
   };
   return (
@@ -76,9 +77,9 @@ const AgendarCita = () => {
                 value={dataForm.speciality}
                 onChange={handleInputChange}
               >
-                <option value="Cardiologia">Cardiologia</option>
-                <option value="Pediatria">Pediatria</option>
-                <option value="Oftamologia">Oftamologia</option>
+                <option value="1">Cardiologia</option>
+                <option value="2">Pediatria</option>
+                <option value="3">Oftamologia</option>
               </select>
             </div>
 

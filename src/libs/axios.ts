@@ -3,7 +3,7 @@ import { useAuthStore } from "../store/auth";
 
 
 const authApi = axios.create({
-  baseURL: "http://localhost:6005/api/v1",
+  baseURL: "https://citas-medicas-nu.vercel.app/api/v1",
   withCredentials: true,
 });
 

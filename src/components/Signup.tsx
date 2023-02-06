@@ -75,102 +75,89 @@ const SignUp = () => {
       <Navgar />
       <div className="page-wrapper bg-red p-t-180 p-b-100 font-robo">
         <div className="wrapper wrapper--w960">
-          <div className="card card-2">
+          <div className="card card-2 justify-content-center align-items-center vh-130 font-robo">
             <div className="card-heading"></div>
-            <div className="card-body">
-              <h2 className="title">Registrate</h2>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="input-group">
-                  <label htmlFor="firstname">Nombres:</label>
+            <div className="card-body2 sign_section">
+              <h2 className="title text-center fs-1 text_color"><br></br>REGISTRATE</h2>
+              <form onSubmit={handleSubmit(onSubmit)} className="form-login">
+                <div className="input-group form">
+                  <label className="mt-4 text_color" htmlFor="firstname">NOMBRES:</label>
                   <input
                     className="input--style-2"
                     type="text"
                     placeholder="Tu nombres aquí"
+                    required
                     {...register("firstname")}
                   />
                   <span className="text-danger text-small d-block mb-2">
                     {errors.firstname?.message}
                   </span>
                 </div>
-                <div className="row row-space">
-                  <div className="col-2">
-                    <div className="input-group">
-                      <label htmlFor="lastname">Apellidos:</label>
+                    <div className="input-group form">
+                      <label htmlFor="lastname">APELLIDOS:</label>
                       <input
                         className="input--style-2"
                         placeholder="Tus apellidos aquí"
                         {...register("lastname")}
+                        required
                       />
                       <span className="text-danger text-small d-block mb-2">
                         {errors.lastname?.message}
                       </span>
-                    </div>
                   </div>
-                </div>
-                <div className="col-2">
-                  <div className="input-group">
-                    <div className="rs-select2 js-select-simple select--no-search">
-                      <label htmlFor="age">Edad:</label>
+                  <div className="input-group form">
+                      <label htmlFor="age">EDAD:</label>
                       <input
                         className="input--style-2"
                         placeholder="Ingresa tu edad aquí"
+                        required
                         {...register("age")}
                       />
                       <span className="text-danger text-small d-block mb-2">
                         {errors.age?.message}
                       </span>
-                    </div>
-                  </div>
                 </div>
-                <div className="col-2">
-                  <div className="input-group">
-                    <div className="rs-select2 js-select-simple select--no-search">
-                      <label htmlFor="email">Correo Electrónico:</label>
+                  <div className="input-group form">
+                      <label htmlFor="email">CORREO ELECTRÓNICO:</label>
                       <input
                         className="input--style-2"
                         placeholder="ejemplo@correo.com"
+                        required
                         {...register("email")}
                       />
                       <span className="text-danger text-small d-block mb-2">
                         {errors.email?.message}
                       </span>
-                    </div>
-                  </div>
+
                 </div>
-                <div className="col-2">
-                  <div className="input-group">
-                    <div className="rs-select2 js-select-simple select--no-search">
-                      <label htmlFor="password">Contraseña:</label>
+                  <div className="input-group form">
+                      <label htmlFor="password">CONTRASEÑA:</label>
                       <input
                         className="input--style-2"
                         type="password"
                         placeholder="Ingresa tu contraseña"
+                        required
                         {...register("password")}
                       />
                       <span className="text-danger text-small d-block mb-2">
                         {errors.password?.message}
                       </span>
-                    </div>
-                  </div>
                 </div>
-                <div className="col-2">
-                  <div className="input-group">
-                    <div className="rs-select2 js-select-simple select--no-search">
-                      <label htmlFor="phone">Teléfono:</label>
+                  <div className="input-group form">
+                      <label htmlFor="phone">TELÉFONO:</label>
                       <input
                         className="input--style-2"
                         placeholder="Ingresa tu teléfono"
+                        required
                         {...register("phone")}
                       />
                       <span className="text-danger text-small d-block mb-2">
                         {errors.phone?.message}
                       </span>
-                    </div>
-                  </div>
                 </div>
                 <div className="p-t-30">
-                  <button className="btn btn-primary" type="submit">
-                    Registrarse
+                  <button className="btn btn-primary btn btn-success bg-info mt-4 fw-semibold shadow-sm" type="submit">
+                    REGISTRARSE
                   </button>
                 </div>
               </form>

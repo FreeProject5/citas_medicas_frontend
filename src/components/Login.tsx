@@ -29,10 +29,11 @@ const Login = () => {
 
   return (
     <>
-      <Navgar />
-      <div className="container">
-        <div className="justify-content-center align-items-center vh-100 font-robo">
-          <h2 className="text-center fs-1">Iniciar Sesión</h2>
+      <Navgar /> 
+      
+      <div className="login_section">
+        <div className="justify-content-center align-items-center vh-130 font-robo" >
+          <h2 className="text-center fs-1 text_color"><br></br>INICIAR SESIÓN</h2>
           <br />
           <form onSubmit={handleSubmit} className="form-login">
           <div className="d-flex justify-content-center">
@@ -42,26 +43,27 @@ const Login = () => {
               style={{ height: "7rem" }}
             />
           </div>
-            <span className="mt-4">Email</span>
-            <div className="input-group mt-4">
+            <span className="mt-4 text_color">EMAIL:</span>
+            <div className="input-group mt-4 svg">
               <div className="input-group-text bg-info">
                 <img
                   src={loginUserIcon}
                   alt="username-icon"
                   style={{height: "1rem"}}
+
                 />
               </div>
               <input
                 className="form-control"
                 type="email"
-                placeholder="example@gmail.com"
+                placeholder="ejemplo@correo.com"
                 name="email"
                 required
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
             </div>
-            <span>Contraseña:</span>
+            <span className= "text_color">CONTRASEÑA:</span>
             <div className="input-group mt-1">
               <div className="input-group-text bg-info">
                 <img
@@ -81,10 +83,10 @@ const Login = () => {
               />
             </div>
             <button
-              className="btn btn-success  mt-4 fw-semibold shadow-sm"
+              className="btn btn-success bg-info mt-4 fw-semibold shadow-sm"
               type="submit"
             >
-              Iniciar Sesión
+              INICIAR SESIÓN
             </button>
           </form>
         </div>

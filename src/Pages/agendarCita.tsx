@@ -29,20 +29,6 @@ const AgendarCita = () => {
     e.preventDefault();
     console.log(dataForm);
 
-    // fetch("http://localhost:6005/api/v1/appointments", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(dataForm),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log("Success sent:", data);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //   });
   };
   return (
     <>

@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
+import {getDoctors} from "../api/getDoctors"
+import { getSpecialities } from "../api/getEspecialities";
 
 const AgendarCita = () => {
   const navigate = useNavigate();
-  const usuario = useAuthStore.getState().user
+  const usuario = useAuthStore.getState().user;
   const [dataForm, setDataForm] = useState({
-    firstname: usuario?usuario.firstname:"",
-    lastname: usuario?usuario.lastname:"",
+    firstname: usuario ? usuario.firstname : "",
+    lastname: usuario ? usuario.lastname : "",
     speciality: "",
     doctorName: "",
     consultDate: "",
@@ -27,25 +29,27 @@ const AgendarCita = () => {
     e.preventDefault();
     console.log(dataForm);
 
-    fetch("http://localhost:6005/api/v1/appointments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dataForm),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Success sent:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    // fetch("http://localhost:6005/api/v1/appointments", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(dataForm),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log("Success sent:", data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
   };
   return (
     <>
       <Navbar />
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
+      <button className ="btn btn-danger"onClick={getDoctors}>ver doctores</button>
+      <button className ="btn btn-info"onClick={getSpecialities}>ver Especialidades</button>
       {usuario && (
         <form className="form-agendar-cita" onSubmit={handleSubmit}>
           <div className="container">
@@ -133,7 +137,7 @@ const AgendarCita = () => {
               </button>
               <button
                 className="btn btn-danger ms-1 "
-                onClick={()=>navigate("/paciente")}
+                onClick={() => navigate("/paciente")}
               >
                 Cancelar
               </button>

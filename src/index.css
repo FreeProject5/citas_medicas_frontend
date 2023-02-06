@@ -191,6 +191,14 @@ button {
 }
 
 /* header section start */
+.banner_section {
+  width: 100%;
+  float: left;
+  background-image: url(/src/public/images/banner-bg.png);
+  height: auto;
+  background-size: auto;
+  padding-bottom: 100px;
+}
 
 .bg-light {
   background-image: url(/src/public/images/header-bg.png);
@@ -202,9 +210,11 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 15px;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 20px;
   color: #acabab;
   text-transform: uppercase;
+  
+  
 }
 .navbar-light .navbar-nav .nav-link:focus, 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -365,15 +375,6 @@ button {
 
 /* banner section start */
 
-.header_section {
-  width: 100%;
-  float: left;
-  background-image: url(/src/public/images/banner-bg.png);
-  height: auto;
-  background-size: 100%;
-  padding-bottom: 190px;
-}
-
 .banner_section {
   padding-top: 40px;
   padding-bottom: 70px;
@@ -383,7 +384,13 @@ button {
   width: 44%;
   float: left;
   background: #fff;
-  padding: 40px;
+  padding: 40px 5px;
+  background-color: #ffffff; 
+  /* padding: 55px 30px 100px 50px; */
+  /* box-shadow: 0px 2px 14px 10px #f3f2f2; */
+  /* align-items: center; */
+  margin: 3 auto;
+  justify-content: space-between;
 }
 
 .banner_taital {
@@ -396,9 +403,13 @@ button {
 .banner_text {
   width: 100%;
   float: left;
-  font-size: 16px;
+  font-size: 35px;
   color: #000;
-  margin: 0px;
+}
+.Parrafo{
+  margin: 1px 1;
+  padding: 1px 0;
+  padding-top: 0px;
 }
 .btn_main {
   width: 100%;
@@ -472,7 +483,7 @@ button {
   float: left;
   padding-bottom: 180px;
   height: auto;
-  background-size: 100%;
+  background-size: auto;
 }
 .testimonial_taital{
   width: 100%;
@@ -499,18 +510,18 @@ button {
   padding-bottom: 10px;
 }
 .testimonial_box {
-  width: 120%;
+  width: 90%;
   background-color: #ffffff;
-  padding: 55px 30px 100px 50px;
-  box-shadow: 0px 2px 14px 10px #f3f2f2;
+  padding: 15px 10px 100px 50px;
+  box-shadow: 0px 2px 14px 7px #f3f2f2;
   display: flex;
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;
 }
 .jonimo_text{
-  width: 100%;
-  font-size: 20px;
+  width: 80%;
+  font-size: 15px;
   text-transform: uppercase;
   color: #7ed957;
   font-weight: bold;
@@ -670,8 +681,8 @@ input {
 /* end input group 1 */
 .input-group {
   position: relative;
-  margin-bottom: 32px;
-  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+  border-bottom: 0px solid #e5e5e5;
 }
 
 .input-icon {
@@ -689,10 +700,10 @@ input {
 }
 
 .input--style-2 {
-  padding: 9px 0;
+  padding: 7px 0;
   color: #666;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .input--style-2::-webkit-input-placeholder {
@@ -753,3 +764,76 @@ input {
 }
 
 /* Login Form */
+
+
+.login_section {
+  /* background-color: #00363a;
+  padding-bottom: 10px;
+  background-size: 180%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 100%;
+  background-image: url(/src/public/images/login.png);
+  float: left;
+  padding-bottom: 150px;
+  height: 100%;
+  background-size: auto;
+
+  
+} 
+
+.sign_section {
+  width: 100%;
+  background-image: url(/src/public/images/signup.png);
+  float: left;
+  padding-bottom: 150px;
+  height: 100%;
+  background-size: auto;
+
+  
+} 
+
+
+.text_color {
+  color: rgb(49, 48, 48);
+}
+
+.text_color2 {
+  color: rgb(255, 255, 255);
+}
+
+.bg-info {
+  fill: #ffffff;
+}
+
+.banner_ba {
+  background-image: url(/src/public/images/carta.png);
+  background-size: auto;
+}
+
+
+.form-login{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-item {
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

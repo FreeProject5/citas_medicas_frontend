@@ -74,11 +74,6 @@ const Footer = () => {
                       <img src={github} alt = "github"/>
                     </a>
                   </li>
-                  <li>
-                    <a href="cascada.html">
-                      <img src={o} alt = "o"/>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>

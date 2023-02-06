@@ -13,8 +13,7 @@ const Testimonial = () => {
             data-slide-to="0"
             className="active"
           ></li>
-          <li data-target="#my_carousel" data-slide-to="1"></li>
-          <li data-target="#my_carousel" data-slide-to="2"></li>
+
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">

@@ -15,7 +15,7 @@ const Navbar = () => {
     navigate("/login");
   };
   return (
-    <div className="header_section">
+    <div className="bg-light">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="logo">
           <a href="/">
@@ -34,7 +34,7 @@ const Navbar = () => {
                     navigate("/login");
                   }}
                 >
-                  Log out
+                  Cerrar Sesión
                 </button>
               </li>
             ) : (

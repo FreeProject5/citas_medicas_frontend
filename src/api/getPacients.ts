@@ -5,5 +5,5 @@ export const getPacients = async () => {
       "https://citas-medicas-nu.vercel.app/api/v1/patient"
     );
     const patients = response.data.data;
-    return patients
+    console.log(patients);
   };

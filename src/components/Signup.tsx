@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import axios from "../libs/axios";
+import axios from "axios";
 import Navgar from "./Navbar";
 import Footer from "./Footer";
 import { useNavigate } from "react-router";
@@ -53,7 +53,7 @@ const SignUp = () => {
   const onSubmit = (data: FormData) => {
     console.log(data);
     axios
-      .post("patient", data)
+      .post("https://citas-medicas-nu.vercel.app/api/v1/patient", data)
       .then(function (response) {
         console.log(response.status);
         if (response.status === 200) {

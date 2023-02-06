@@ -5,6 +5,6 @@ export const getDoctors = async () => {
       "https://citas-medicas-nu.vercel.app/api/v1/doctor"
     );
     const doctors = response.data.data.data;
-    return doctors;
+    console.log(doctors);
   };
 

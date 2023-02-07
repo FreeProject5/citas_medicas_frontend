@@ -2,6 +2,8 @@ import CalendarReact from "../components/CalendarReact";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import citas_pro from "../api/getCitas";
+import React, { useEffect, useState } from "react";
 
 const Paginamedico = () => {
   const navigate = useNavigate();
@@ -9,6 +11,11 @@ const Paginamedico = () => {
   const handleClick = () => {
     navigate("/medico/cita");
   };
+
+  const [pro_citass, setProcitas] = useState([])
+  useEffect(() => {
+    citas_pro(setProcitas)            
+  },[])
 
   return (
     <>
@@ -19,7 +26,13 @@ const Paginamedico = () => {
           <div className="col-8">
             <div className="d-grid gap-2 col-8 mx-auto">
 
-              {/* Mostrar citas desde la db */}
+               {pro_citass !== null ? (
+                pro_citass.map((pro_citass:any) => (
+                  <div key={pro_citass.id}>
+                    {pro_citass.date}
+                  </div>
+                ))
+               ) : ('no hay citas programadas')}
             
             </div>
           </div>

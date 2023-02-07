@@ -30,6 +30,7 @@ function App() {
             }/>
           <Route path="paciente/citas" element={<Paginacitas/>}/>
         </Route>
+        
         <Route path="/login-medico" element={<Loginmedico/>}/>
         <Route element={<ProtectedRoute isAllowed={isAuth}/>}>
           <Route path="/medico" element={
@@ -37,7 +38,6 @@ function App() {
           } />
         </Route>
 
-        
       </Routes>
     </Router>
    

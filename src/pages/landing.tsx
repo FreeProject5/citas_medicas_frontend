@@ -11,7 +11,7 @@ const Landing = () => {
       <Banner/>
       <Testimonial/>
       <Footer />
-    
+
     </div>
   );
 };

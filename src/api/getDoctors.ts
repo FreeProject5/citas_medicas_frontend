@@ -7,4 +7,4 @@ export const getDoctors = async () => {
     const doctors = response.data.data.data;
     console.log(doctors);
   };
-
+ 

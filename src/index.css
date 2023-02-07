@@ -837,3 +837,7 @@ input {
   align-items: center;
   height: 100%;
 }
+
+.quote-border{
+  border-left: .25rem #a34e78 solid
+}

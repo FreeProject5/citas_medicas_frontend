@@ -1,5 +1,7 @@
 import React from "react";
 import comillas from "../public/images/quick-icon.png"
+import imagen1 from "../public/images/imagen1.png"
+import imagen2 from "../public/images/imagen2.png"
 
 const Testimonial = () => {
   return (
@@ -11,8 +13,7 @@ const Testimonial = () => {
             data-slide-to="0"
             className="active"
           ></li>
-          <li data-target="#my_carousel" data-slide-to="1"></li>
-          <li data-target="#my_carousel" data-slide-to="2"></li>
+
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -26,7 +27,7 @@ const Testimonial = () => {
                   <div className="col-md-6">
                     <div className="testimonial_box">
                       <img
-                        src="imagen1.png"
+                        src={imagen1}
                         alt="Imagen 1"
                         className="testimonial_image"
                       />
@@ -50,7 +51,7 @@ const Testimonial = () => {
                   </div>
                   <div className="col-md-6">
                     <div className="testimonial_box">
-                      <img src="imagen2.jpg" alt="Imagen 2" />
+                      <img src={imagen2} alt="Imagen 2" />
                       <div className="jonimo_taital_main">
                         <h4 className="jonimo_text">Alejandra Ramos Cabrera</h4>
                         <div className="quick_icon">
@@ -61,11 +62,11 @@ const Testimonial = () => {
                         </div>
                       </div>
                       <p className="dummy_text">
-                        "Estoy profundamente agradecido con todos los
+                        "Estoy profundamente agradecida con todos los
                         profesionales que trabajan en este hospital. Fui
-                        atendido con rapidez y eficacia, y siempre me sentí
-                        respetado y valorado. La calidad de los cuidados médicos
-                        que recibí fue excelente y estoy muy satisfecho con los
+                        atendida con rapidez y eficacia, y siempre me sentí
+                        respetada y valorada. La calidad de los cuidados médicos
+                        que recibí fue excelente y estoy muy satisfecha con los
                         resultados."
                       </p>
                     </div>

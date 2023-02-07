@@ -1,10 +1,10 @@
 import React from 'react'
-import Landing from './Pages/landing'
+import Landing from './pages/landing'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useAuthStore } from './store/auth';
 import Login from './components/Login';
-import MenuPacient from './Pages/menuPacient';
-import AgendarCita from './Pages/agendarCita';
+import MenuPacient from './pages/menuPacient';
+import AgendarCita from './pages/agendarCita';
 import SignUp from './components/Signup';
 import Paginamedico from './medico/medicopag';
 import Paginacitas from './citas/citaspag';

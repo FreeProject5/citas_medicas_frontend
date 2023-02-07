@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import citas_pro from "../api/getCitas";
-import{ useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Paginamedico = () => {
   const navigate = useNavigate();
@@ -57,6 +57,7 @@ const Paginamedico = () => {
                 <p>
                   <input type="text" id="dia" name="dia" />
                 </p>
+
                 <input type="submit" defaultValue="Enviar" />
               </form>
           </div>

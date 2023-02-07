@@ -9,6 +9,7 @@ import SignUp from './components/Signup';
 import Paginamedico from './medico/medicopag';
 import Paginacitas from './citas/citaspag';
 import { ProtectedRoute } from './components/ProtectedRoute';
+import Loginmedico from './medico/Loginmedico';
 
 
 function App() {
@@ -27,9 +28,16 @@ function App() {
           <Route path="/paciente/agendar-cita" element={
             <AgendarCita/>
             }/>
+          <Route path="paciente/citas" element={<Paginacitas/>}/>
         </Route>
-        <Route path="/medico" element={<Paginamedico/>}/>
-        <Route path="/citas" element={<Paginacitas/>}/>
+        <Route path="/login-medico" element={<Loginmedico/>}/>
+        <Route element={<ProtectedRoute isAllowed={isAuth}/>}>
+          <Route path="/medico" element={
+            <Paginamedico/>
+          } />
+        </Route>
+
+        
       </Routes>
     </Router>
    

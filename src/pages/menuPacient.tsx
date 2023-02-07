@@ -19,7 +19,7 @@ const MenuPacient = () => {
               >
                 Agendar Cita
               </button>
-              <button className="btn btn-secondary" type="button" onClick={()=> navigate("/citas")}>
+              <button className="btn btn-secondary" type="button" onClick={()=> navigate("/paciente/citas")}>
                 Mis Citas
               </button>
             </div>

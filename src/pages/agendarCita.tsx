@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-
+import { toast, Toaster } from "react-hot-toast";
 
 interface IEspecialidad {
   id: number;
@@ -23,9 +23,9 @@ interface IDoctor {
 interface IHorario {
   id: number;
   id_doctor: number;
-  date: string; //2023-02-06
-  start_time: string; //"09:00:00-05",
-  end_time: string; //"16:00:00-05",
+  date: string;
+  start_time: string; 
+  end_time: string; 
 }
 
 const AgendarCita = () => {
@@ -78,7 +78,16 @@ const AgendarCita = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const notify = () => {
+    toast.success("cita agendada con éxito", {
+      icon: "✅",
+      style: {
+        borderRadius: "10px",
+      },
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const {
       id_patient,
@@ -96,12 +105,11 @@ const AgendarCita = () => {
       checkup_date: checkup_date,
       checkup_time: checkup_time,
     };
-    axios
+    await axios
       .post("https://citas-medicas-nu.vercel.app/api/v1/checkup", formulario)
       .then(function (response) {
-        console.log(response.status);
         console.log(response);
-        navigate("/paciente");
+        notify()
       })
       .catch(function (error) {
         console.log(error);
@@ -120,8 +128,8 @@ const AgendarCita = () => {
   return (
     <>
       <Navbar />
+      <Toaster position="top-center" reverseOrder={false} />
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
-
       {usuario && (
         <form className="form-agendar-cita mb-5" onSubmit={handleSubmit}>
           <div className="container">
@@ -239,7 +247,7 @@ const AgendarCita = () => {
           </div>
         </form>
       )}
-      <Footer/>
+      <Footer />
     </>
   );
 };

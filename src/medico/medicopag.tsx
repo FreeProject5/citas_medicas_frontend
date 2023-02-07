@@ -12,24 +12,7 @@ const Paginamedico = () => {
 
   return (
     <>
-      {/* Cuadro de pagina principal y cerrar sesion */}
-      
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-8">
-            <div className="d-grid gap-2 col-8 mx-auto">
-
-              <a href="index.html"> Pagina principal</a>
-            
-            </div>
-          </div>
-          <div className="col-sm-12 col-md-6 col-xl-4 mb-12">
-            <button className="button">Log out</button>
-          </div>
-        </div>
-      </div>
-      
-      <hr />
+      <Navbar /> 
       
       <div className="container">
         <div className="row align-items-center">

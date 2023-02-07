@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import citas_pro from "../api/getCitas";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Paginamedico = () => {
   const navigate = useNavigate();
@@ -25,11 +25,13 @@ const Paginamedico = () => {
         <div className="row align-items-center">
           <div className="col-8">
             <div className="d-grid gap-2 col-8 mx-auto">
-
+              <h2>Citas programadas</h2>
                {pro_citass !== null ? (
                 pro_citass.map((pro_citass:any) => (
                   <div key={pro_citass.id}>
-                    {pro_citass.date}
+                    <p> Id_cita: {pro_citass.id} </p>
+                     <p>Id_medico: {pro_citass.id_doctor}</p>
+                    <p> Fecha de la cita: {pro_citass.date} </p>
                   </div>
                 ))
                ) : ('no hay citas programadas')}
@@ -55,12 +57,7 @@ const Paginamedico = () => {
                 <p>
                   <input type="text" id="dia" name="dia" />
                 </p>
-                <p>
-                  <label htmlFor="hora">Seleccionar hora:</label>
-                </p>
-                <p>
-                  <input type="text" id="hora" name="hora" />
-                </p>
+
                 <input type="submit" defaultValue="Enviar" />
               </form>
           </div>

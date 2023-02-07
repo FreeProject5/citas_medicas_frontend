@@ -3,6 +3,7 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import { useAuthStore } from "../store/auth";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 
 interface IEspecialidad {
@@ -122,7 +123,7 @@ const AgendarCita = () => {
       <h2 className="text-center mt-4 mb-4">Agendar Nueva Cita</h2>
 
       {usuario && (
-        <form className="form-agendar-cita" onSubmit={handleSubmit}>
+        <form className="form-agendar-cita mb-5" onSubmit={handleSubmit}>
           <div className="container">
             <div className="row mb-4">
               <div className="col">
@@ -238,6 +239,7 @@ const AgendarCita = () => {
           </div>
         </form>
       )}
+      <Footer/>
     </>
   );
 };

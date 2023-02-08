@@ -12,7 +12,7 @@ Este repositorio contiene el código frontend del proyecto de aplicación web qu
   npm install
   ```
 - Ejecutar el proyecto 
-    ````bash
+    ```bash
     npm start
     ```
 
@@ -23,13 +23,18 @@ Este repositorio contiene el código frontend del proyecto de aplicación web qu
 
     ![Sign up](/src/public/images/sign_up.png)
 
-2. Login de usuario paciente
+2. Login de usuarios:
+    - Pacientes
 
     <https://app-citas-medicas.vercel.app/login>
 
+    - Doctores
+
+    <https://app-citas-medicas.vercel.app/login-medico>
+
     ![Login](/src/public/images/login_deploy.png)
 
-3. Vista de paciente
+3. Vista principal de pacientes
 
     <https://app-citas-medicas.vercel.app/paciente>
 
@@ -40,3 +45,9 @@ Este repositorio contiene el código frontend del proyecto de aplicación web qu
     <https://app-citas-medicas.vercel.app/paciente/agendar-cita>
 
     ![Login](/src/public/images/registrar_cita.png)
+
+5. Vista principal doctores
+
+    https://app-citas-medicas.vercel.app/medico
+
+    ![Login](/src/public/images/view_doctor.png)

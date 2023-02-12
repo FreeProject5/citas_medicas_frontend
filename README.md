@@ -2,8 +2,8 @@
 
 Este repositorio contiene el código frontend del proyecto de aplicación web que permite administrar, gestionar y procesar solicitudes de citas médicas online.
 
-- Backend -> [REST API citas médicas](https://citas-medicas-nu.vercel.app/api/v1/)
 - Frontend -> [App citas médicas](https://app-citas-medicas.vercel.app/)
+- Backend -> [REST API citas médicas](https://citas-medicas-nu.vercel.app/api/v1/) - [Repositorio](https://github.com/FreeProject5/Project_backend)
 
 ## Instalación y configuración 🛠️
 
@@ -38,16 +38,16 @@ Este repositorio contiene el código frontend del proyecto de aplicación web qu
 
     <https://app-citas-medicas.vercel.app/paciente>
 
-    ![Login](/src/public/images/view_patient.png)
+    ![View patient](/src/public/images/view_patient.png)
 
 4. Registrar un cita médica
 
     <https://app-citas-medicas.vercel.app/paciente/agendar-cita>
 
-    ![Login](/src/public/images/registrar_cita.png)
+    ![Register checkup](/src/public/images/registrar_cita.png)
 
 5. Vista principal doctores
 
     https://app-citas-medicas.vercel.app/medico
 
-    ![Login](/src/public/images/view_doctor.png)
+    ![View doctor](/src/public/images/view_doctor.png)
